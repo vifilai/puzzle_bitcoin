@@ -235,19 +235,19 @@ class BTC():
         for i in range(r):
             priv_int = random.randint(self.r_start, self.r_end)
             key = Key().from_int(priv_int)
-            address_p2pkh_c = key.address_p2pkh_c
-            # address_p2pkh_c = '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so' # test 
+            address = key.address
+            # address = '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so' # test 
 
-            if  address_p2pkh_c in p_addr_list.values():
+            if  address in p_addr_list.values():
                 print('==== Congrats to you ! Find key success ====')
                 print('==== SUCCESS = GOOD JOB BRO ! ====')
                 print(key.to_hex() ,'\n')
-                print(key.address_p2pkh_c  ,'\n')
+                print(key.address  ,'\n')
 
                 f = open("$_Foundkey.txt", "a") # the found privatekey and address saved to "$_Foundkey.txt"
                 f.write(key.to_hex()+'\n')
                 f.write(key.to_wif()+'\n')
-                f.write(key.address_p2pkh_c+'\n')
+                f.write(key.address +'\n')
                 f.close()
                 exit()
             cur_n.value += 1
