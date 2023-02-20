@@ -1,2 +1,2 @@
 # puzzle_bitcoin
-guess bitcoin private key in puzzle bitcoin lists
+guess bitcoin privatekey in puzzle bitcoin lists
