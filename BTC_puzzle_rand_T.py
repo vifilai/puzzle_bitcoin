@@ -1,7 +1,3 @@
-# use _Btcbf_ + read database from _plutus_
-# find x in dict().keys() is fastest > than #Tuple - set - lits_array 
-# 13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so
-
 from multiprocessing import Value
 import multiprocessing
 from bit import Key
@@ -266,15 +262,11 @@ if __name__ =="__main__":
         t2 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
         t3 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
         t4 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
-        t5 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
-        t6 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
         tspeed = multiprocessing.Process(target=obj.speed, args=(cur_n,))
 
         t1.start()
         t2.start()
         t3.start()
         t4.start()
-        t5.start()
-        t6.start()
         tspeed.start()
         
