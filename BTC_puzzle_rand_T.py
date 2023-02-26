@@ -203,7 +203,6 @@ r_keyDec_list = {
 #============================================================
 class BTC():
     def __init__(self):
-        self.mode = 0
         self.r_start = 0
         self.r_end = 0
         print()
@@ -221,7 +220,6 @@ class BTC():
         for i in range(p_start,p_end+1):
             print('__',i,': __',p_addr_list[i])
 
-        self.mode = 'random'
         print()
     # ============================================================
     def speed(self,cur_n):
