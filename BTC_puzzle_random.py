@@ -258,13 +258,13 @@ if __name__ =="__main__":
         cur_n = Value('i',0)
         t1 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
         t2 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
-        t3 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
-        t4 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
+        #t3 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
+        #t4 = multiprocessing.Process(target=obj.run_random, args=(cur_n,))
         tspeed = multiprocessing.Process(target=obj.speed, args=(cur_n,))
 
         t1.start()
         t2.start()
-        t3.start()
-        t4.start()
+        #t3.start()
+        #t4.start()
         tspeed.start()
         
